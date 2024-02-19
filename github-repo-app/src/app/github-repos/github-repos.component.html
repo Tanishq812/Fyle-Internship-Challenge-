@@ -1,0 +1,9 @@
+<!-- github-repos.component.html -->
+<div class="container">
+  <h2>GitHub Repositories</h2>
+  <input type="text" [(ngModel)]="username" placeholder="Enter GitHub username">
+  <button (click)="searchUserRepos()">Search</button>
+  <div *ngFor="let repo of repos">
+    <a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a>
+  </div>
+</div>
